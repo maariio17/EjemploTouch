@@ -15,18 +15,17 @@ function startup() {
 
   function handleStart(evt) {
     evt.preventDefault();
-    log.innerHTML = "touchstart.";
+    document.getElementById("log").innerHTML = "Touchstart " + evt.touches[0].pageX + " "+evt.touches[0].pageY;
   }
-
-  function handleMove(evt) {
-    evt.preventDefault();
-    log.innerHTML = "touchmove.";
-  }
-
   function handleEnd(evt) {
     evt.preventDefault();
-    log.innerHTML = "touchend";
+    document.getElementById("log").innerHTML = "Touchend " + evt.touches[0].pageX + " "+evt.touches[0].pageY;
   }
+  function handleMove(evt) {
+    evt.preventDefault();
+    document.getElementById("log").innerHTML = "Touchmove " + evt.touches[0].pageX + " "+evt.touches[0].pageY;
+  }
+
 
   function handleCancel(evt) {
     evt.preventDefault();
